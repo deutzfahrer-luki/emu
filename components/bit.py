@@ -1,5 +1,5 @@
 class Bit:
-    def __init__(self, value: bool):
+    def __init__(self, value: bool) -> None:
         if not isinstance(value, bool):
             raise TypeError("value must be a bool")
         self._value = value
@@ -11,7 +11,7 @@ class Bit:
 
 class Input(Bit):
     @Bit.value.setter
-    def value(self, value: bool):
+    def value(self, value: bool) -> None:
         if not isinstance(value, bool):
             raise TypeError("value must be a bool")
         self._value = value
